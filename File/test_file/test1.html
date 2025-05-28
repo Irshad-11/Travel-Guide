@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll and Multiple Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; /* Enable smooth scroll */
+            margin: 0;
+        }
+
+        section {
+            padding: 50px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .scroll-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        /* Hidden content with animation */
+        #content2, #content3 {
+            background-color: #eaeaea;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 1s ease, transform 1s ease;
+            padding: 40px;
+            text-align: left;
+        }
+
+        /* Ensures that the content becomes visible when content2 and content3 are targeted */
+        #content2:target, #content3:target {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Basic section styling */
+        #content1 {
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the article content */
+        #content2, #content3 {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        #content2 h2, #content3 h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #content2 p, #content3 p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1 with links to content 2 and content 3 -->
+    <section id="content1">
+        <div>
+            <h1>Welcome to Section 1</h1>
+            <p>This is the first section. Click the buttons below to smoothly scroll to the respective content sections.</p>
+            <a href="#content2" class="scroll-button">Go to Content 2</a>
+            <a href="#content3" class="scroll-button">Go to Content 3</a>
+        </div>
+    </section>
+
+    <!-- Section 2 with article-like content -->
+    <section id="content2">
+        <div>
+            <h2>Understanding Web Development</h2>
+            <p>Web development is the process of building websites and applications for the internet. It encompasses a variety of skills and technologies, including HTML, CSS, JavaScript, and server-side programming. Frontend development focuses on the design and interaction of a website, while backend development handles the server-side logic, database management, and integration.</p>
+            
+            <p>One of the key aspects of modern web development is ensuring a smooth user experience. This includes creating fast, responsive, and intuitive interfaces that can work across different devices and platforms. From responsive design to optimizing performance, web developers must consider numerous factors to ensure the best user experience.</p>
+
+            <p>Today, frameworks like React, Angular, and Vue have revolutionized how we build user interfaces, providing developers with tools to create complex, component-based applications. On the backend, advancements in server technology, cloud computing, and database management have allowed for scalable and efficient web applications.</p>
+        </div>
+    </section>
+
+    <!-- Section 3 with more article content -->
+    <section id="content3">
+        <div>
+            <h2>The Future of Web Development</h2>
+            <p>As the web evolves, so do the technologies and trends in web development. Developers must keep pace with advancements such as Progressive Web Apps (PWAs), serverless architectures, and cloud-native applications to build scalable and efficient web platforms.</p>
+            
+            <p>Artificial intelligence (AI) and machine learning (ML) are beginning to shape the web development landscape. These technologies allow websites to be more personalized, dynamic, and intelligent. Chatbots, recommendation systems, and AI-powered analytics are just a few examples of how the future of web development is transforming.</p>
+            
+            <p>With the rise of mobile and wearable devices, responsive design and performance optimization continue to be essential in web development. As more users access the web via smartphones, tablets, and even smartwatches, developers must ensure that their websites deliver a seamless experience across all devices.</p>
+
+            <p>In conclusion, web development will continue to evolve as technology advances. The future holds exciting opportunities for developers to create more powerful, user-friendly, and intelligent web applications.</p>
+        </div>
+    </section>
+
+</body>
+</html>
